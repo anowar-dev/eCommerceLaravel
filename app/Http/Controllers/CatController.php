@@ -15,4 +15,7 @@ class CatController extends Controller
         $cat_name = $req->cat_name;
         return view('admin.cat', compact('cat_name'));
     }
+    function test(habijabi){
+        wohoho
+    }
 }
