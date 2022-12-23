@@ -223,9 +223,9 @@
             </div>
             <!-- table --->
         <div class="row">  
-          <div class="col-md-6 mx-auto">
-            <div class="container">
-              <table class="table table-bordered bg-white border-primary">
+          <div class="col-md-6 mx-auto stretch-card grid-margin">
+            <div class="card">
+              <table class="table table-bordered bg-white border-primary card-body">
                 <thead class="table table-bordered border-primary">
                   <tr class="table table-bordered border-primary bg-dark text-white">
                     <th>SL</th>
@@ -234,12 +234,14 @@
                   </tr>
                 </thead>
                 <tbody class="table table-bordered border-primary">
+                  @foreach($data as $d)
                   <tr class="table table-bordered border-primary">
-                    <th>1</th>
-                    <td>n</td>
-                    <td>e</td>
-                    <td>d</td>
+                    <th>{{$d->id}}</th>
+                    <td>{{$d->cat_name}}</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
                   </tr>
+                  @endforeach
                 </tbody>
               </table>          
             </div>
